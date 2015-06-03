@@ -1,0 +1,14 @@
+<div id="<%- id %>"></div>
+<script>
+  if (!window.google) {
+    document.body.innerHTML = 'You need to include the script //google.com/jsapi on your template';
+    throw 'Google JS API is needed';
+  } else {
+    (function() {
+      google.load('visualization', '1.0', {'packages': <%= JSON.stringify(deps) %>});
+      google.setOnLoadCallback(function() {
+        (new google.visualization.<%- chartType %>(document.getElementById("<%- id %>"))).draw(google.visualization.arrayToDataTable(<%= data %>),<%= JSON.stringify(options) %>);
+      });
+    })();
+  }
+</script>

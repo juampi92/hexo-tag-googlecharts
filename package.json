@@ -1,0 +1,24 @@
+{
+  "name": "hexo-tag-googlecharts",
+  "version": "1.0.0",
+  "main": "index",
+  "author": {
+    "name": "Juan Pablo Barreto",
+    "email": "juampi92@gmail.com",
+    "url": "https://github.com/juampi92"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/juampi92/hexo-tag-googlecharts.git"
+  },
+  "dependencies": {
+    "underscore": "^1.8.3"
+  },
+  "description": "A hexo tag for inserting google charts in your blog.",
+  "maintainers": [
+    {
+      "name": "juampi92",
+      "email": "juampi92@gmail.com"
+    }
+  ]
+}
