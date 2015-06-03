@@ -6,7 +6,7 @@ var filePath = path.join(__dirname, 'google-charts-template.html');
 
 function googleMaps(args, content) {
 
-  var template = fs.readFileSync(filePath).toString().trim(),
+  var template = fs.readFileSync(filePath).toString(),
     data = [],
     options = {},
     chartType,
@@ -41,7 +41,7 @@ function googleMaps(args, content) {
   chartType = args[0] || 'Table';
 
   // Output into 
-  return _.template(template, {
+  return _.template(template)({
     id: 'googleChart' + ((Math.random() * 9999) | 0),
     options: options,
     deps: ['corechart', 'geochart', 'table'],
