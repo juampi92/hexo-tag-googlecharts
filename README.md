@@ -8,7 +8,7 @@ Compatible with Hexo Version 3
 
 First, you should go check [GoogleCharts](https://google-developers.appspot.com/chart/interactive/docs/) docs, so you could understand this plugin's potential.
 
-The google charts tag plugin for hexo  helps you add dynamic charts by google into your hexo blog. The tag called `googlecharts` requires an endtag called `endgooglecharts`.
+The google charts tag plugin for hexo  helps you add dynamic charts by google into your hexo blog.
 
 ## Install
 
@@ -24,10 +24,9 @@ Then you should run the following command
 npm install hexo-tag-googlecharts --save
 ```
 
-(it's not yet in npm)
-
 ## How to use it
 
+The tag called `googlecharts` requires an endtag called `endgooglecharts`.
 The main tag can have up to 3 arguments, which none are required, but they have default values that may not be what you wanted.
 If a chart is created without a type, it'll default to `Table`. Then the default width is 400, and default height is 400 too.
 
@@ -131,18 +130,10 @@ The options, remove the title, height or width, and you have your custom options
 
 ````json
 {"hAxis": {"title": "Year", "titleTextStyle": {"color": "#333" }}, "vAxis": { "minValue": 0}}
+
 ```
 
 And finally, inside `arrayToDataTable` you have the data.
 Remove the first `[` and the last `],` of each line, and you have your data.
 
 **Note:** if in the chart example code they use things like `data.addColumn('string', 'Something')`, ignore them, and add the columns the way it's explained in this document. If it doesn't work, you can always inspect the generated Javascript, and see if that's the data you wanted.
-
-## 
-
-
-
-
-
-
-
